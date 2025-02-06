@@ -1,0 +1,15 @@
+[
+    {
+        "title": "",
+        "permalink": "",
+        "desc": "",
+        "views": "",
+        "type": "JS",
+        "difficulty": "",
+        "partial-code": "<base path>/perma-link/partial.js",
+        "tests": "<base path>/perma-link/index.test.js",
+        "solutions": "<base path>/perma-link/solutions/<authorGithubName.js>",
+        "resources": "",
+        "misc|meta": ""
+    }
+]

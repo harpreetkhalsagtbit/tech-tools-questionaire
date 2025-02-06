@@ -1,0 +1,40 @@
+{
+    "title": "Top JavaScript Array Interview Questions | Problem Solving | Array Polyfills",
+    "questions": [{
+        "title": "How to implement Array.isArray? JavaScript Interview Question | Array Polyfills",
+        "permalink": "polyfill-of-Array-isArray",
+        "desc": "Create polyfill of Array.isArray()",
+        "views": "",
+        "type": "JS",
+        "difficulty": "beginner",
+        "partial-code": "<base path>/<permalink>/partial.js",
+        "tests": "<base path>/<permalink>/index.test.js",
+        "solutions": "<base path>/<permalink>/solutions/<authorGithubName.js>",
+        "resources": "",
+        "misc|meta": ""
+    }, {
+        "title": "How to implement Array.prototype.filter? JavaScript Interview Question | Array Polyfills",
+        "permalink": "polyfill-of-Array-filter",
+        "desc": "Create polyfill of Array.filter()",
+        "views": "",
+        "type": "JS",
+        "difficulty": "beginner",
+        "partial-code": "<base path>/<permalink>/partial.js",
+        "tests": "<base path>/<permalink>/index.test.js",
+        "solutions": "<base path>/<permalink>/solutions/<authorGithubName.js>",
+        "resources": "",
+        "misc|meta": ""
+    }, {
+        "title": "How to implement Array.prototype.filter2? JavaScript Interview Question | Array Polyfills",
+        "permalink": "polyfill-of-Array-filter2",
+        "desc": "Create polyfill of Array.filter()",
+        "views": "",
+        "type": "JS",
+        "difficulty": "beginner",
+        "partial-code": "<base path>/<permalink>/partial.js",
+        "tests": "<base path>/<permalink>/index.test.js",
+        "solutions": "<base path>/<permalink>/solutions/<authorGithubName.js>",
+        "resources": "",
+        "misc|meta": ""
+    }]
+}

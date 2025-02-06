@@ -1,0 +1,168 @@
+[
+    {
+        "title": "harpreet - customIsArray",
+        "tests": [
+            {
+                "title": "should return true for regular arrays",
+                "expects": [
+                    {
+                        "args": "[]",
+                        "value": true
+                    },
+                    {
+                        "args": "[1, 2, 3]",
+                        "value": true
+                    },
+                    {
+                        "args": "new Array()",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "title": "should return false for non-array values",
+                "expects": [
+                    {
+                        "args": "42",
+                        "value": false
+                    },
+                    {
+                        "args": "\"hello\"",
+                        "value": false
+                    },
+                    {
+                        "args": "{}",
+                        "value": false
+                    },
+                    {
+                        "args": "( => { })",
+                        "value": false
+                    },
+                    {
+                        "args": "null",
+                        "value": false
+                    },
+                    {
+                        "args": "undefined",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "title": "should return false for array-like objects",
+                "expects": [
+                    {
+                        "args": "{ length: 0 }",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "title": "should return true for arrays created with Object.create(Array.prototype)",
+                "expects": [
+                    {
+                        "args": "arrLike",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "title": "should return false for objects created with Object.create([])",
+                "expects": [
+                    {
+                        "args": "arrLike",
+                        "value": true,
+                        "moreContext": "Object.create(Array.prototype)"
+                    },
+                    {
+                        "args": "fakeArray",
+                        "value": false,
+                        "moreContext": "Object.create([])"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "harpreet - customIsArray1",
+        "tests": [
+            {
+                "title": "should return true for regular arrays2",
+                "expects": [
+                    {
+                        "args": "[]",
+                        "value": true
+                    },
+                    {
+                        "args": "[1, 2, 3]",
+                        "value": true
+                    },
+                    {
+                        "args": "new Array()",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "title": "should return false for non-array values",
+                "expects": [
+                    {
+                        "args": "42",
+                        "value": false
+                    },
+                    {
+                        "args": "\"hello\"",
+                        "value": false
+                    },
+                    {
+                        "args": "{}",
+                        "value": false
+                    },
+                    {
+                        "args": "( => { })",
+                        "value": false
+                    },
+                    {
+                        "args": "null",
+                        "value": false
+                    },
+                    {
+                        "args": "undefined",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "title": "should return false for array-like objects",
+                "expects": [
+                    {
+                        "args": "{ length: 0 }",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "title": "should return true for arrays created with Object.create(Array.prototype)",
+                "expects": [
+                    {
+                        "args": "arrLike",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "title": "should return false for objects created with Object.create([])",
+                "expects": [
+                    {
+                        "args": "fakeArray",
+                        "value": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Array detection functions",
+        "tests": []
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "categories": [{
+        "title": "JS Interview",
+        "meta": "js-interview",
+        "description": "List of questions fo JS Interview"
+    }, {
+        "title": "JS Polyfills",
+        "meta": "js-polyfills",
+        "description": "List of questions fo JS Polyfill Interview"
+    }]
+}
