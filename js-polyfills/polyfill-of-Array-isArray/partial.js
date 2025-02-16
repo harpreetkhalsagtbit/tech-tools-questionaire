@@ -1,8 +1,4 @@
 /**
- * Read FAQs section on the left for more information on how to use the editor
-**/
-
-/**
  * Do not change function name
  */
 

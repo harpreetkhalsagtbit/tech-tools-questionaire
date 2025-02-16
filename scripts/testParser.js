@@ -38,63 +38,35 @@ const executeAllTests = (userName, fn) => {
     // Add: it and expect to callback
     describe("Array detection functions", () => {
         describe(`${userName} - customIsArray`, (it) => {
-            it("should return true for regular arrays", (expect) => {
+            it("Should return true for regular arrays", (expect) => {
                 expect(fn([])).toBe(true);
                 expect(fn([1, 2, 3])).toBe(true);
                 expect(fn(new Array())).toBe(true);
+                expect(fn(new Array(5))).toBe(true);
             });
 
-            it("should return false for non-array values", (expect) => {
+            it("Should return false for non-array values", (expect) => {
                 expect(fn(42)).toBe(false);
                 expect(fn("hello")).toBe(false);
                 expect(fn({})).toBe(false);
                 expect(fn(() => { })).toBe(false);
                 expect(fn(null)).toBe(false);
                 expect(fn(undefined)).toBe(false);
+                expect(fn(new Set([1, 2, 3]))).toBe(false);
             });
 
-            it("should return false for array-like objects", (expect) => {
+            it("Should return false for array-like objects", (expect) => {
                 expect(fn({ length: 0 })).toBe(false);
                 // expect(fn(arguments)).toBe(false); // `arguments` is not an array
             });
 
-            it("should return true for arrays created with Object.create(Array.prototype)", (expect) => {
+            it("Should return true for arrays created with Object.create(Array.prototype)", (expect) => {
+                expect(fn(Array.prototype)).toBe(true);
                 const arrLike = Object.create(Array.prototype);
                 expect(fn(arrLike)).toBe(true);
             });
 
-            it("should return false for objects created with Object.create([])", (expect) => {
-                const fakeArray = Object.create([]);
-                expect(fn(fakeArray)).toBe(false);
-            });
-        });
-        describe(`${userName} - customIsArray1`, (it) => {
-            it("should return true for regular arrays2", (expect) => {
-                expect(fn([])).toBe(true);
-                expect(fn([1, 2, 3])).toBe(true);
-                expect(fn(new Array())).toBe(true);
-            });
-
-            it("should return false for non-array values", (expect) => {
-                expect(fn(42)).toBe(false);
-                expect(fn("hello")).toBe(false);
-                expect(fn({})).toBe(false);
-                expect(fn(() => { })).toBe(false);
-                expect(fn(null)).toBe(false);
-                expect(fn(undefined)).toBe(false);
-            });
-
-            it("should return false for array-like objects", (expect) => {
-                expect(fn({ length: 0 })).toBe(false);
-                // expect(fn(arguments)).toBe(false); // `arguments` is not an array
-            });
-
-            it("should return true for arrays created with Object.create(Array.prototype)", (expect) => {
-                const arrLike = Object.create(Array.prototype);
-                expect(fn(arrLike)).toBe(true);
-            });
-
-            it("should return false for objects created with Object.create([])", (expect) => {
+            it("Should return false for objects created with Object.create([])", (expect) => {
                 const fakeArray = Object.create([]);
                 expect(fn(fakeArray)).toBe(false);
             });
